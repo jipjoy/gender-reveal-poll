@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,13 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap');
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     :root {
       --boy-primary: #4facfe;
@@ -23,7 +30,8 @@
       --gold: #ffd700;
     }
 
-    html, body {
+    html,
+    body {
       height: 100%;
       overflow: hidden;
     }
@@ -45,7 +53,7 @@
       content: '';
       position: fixed;
       inset: 0;
-      background: 
+      background:
         radial-gradient(ellipse at 20% 50%, rgba(79, 172, 254, 0.08) 0%, transparent 50%),
         radial-gradient(ellipse at 80% 50%, rgba(247, 127, 190, 0.08) 0%, transparent 50%),
         radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.04) 0%, transparent 40%);
@@ -54,8 +62,13 @@
     }
 
     @keyframes bgPulse {
-      0% { opacity: 0.6; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 0.6;
+      }
+
+      100% {
+        opacity: 1;
+      }
     }
 
     /* Floating particles */
@@ -75,10 +88,23 @@
     }
 
     @keyframes floatUp {
-      0% { transform: translateY(100vh) scale(0); opacity: 0; }
-      10% { opacity: 0.6; }
-      90% { opacity: 0.6; }
-      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+      0% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 0.6;
+      }
+
+      90% {
+        opacity: 0.6;
+      }
+
+      100% {
+        transform: translateY(-10vh) scale(1);
+        opacity: 0;
+      }
     }
 
     /* Main container */
@@ -110,8 +136,15 @@
     }
 
     @keyframes gradientShift {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
+
+      0%,
+      100% {
+        background-position: 0% 50%;
+      }
+
+      50% {
+        background-position: 100% 50%;
+      }
     }
 
     .header p {
@@ -166,7 +199,7 @@
     .vote-btn.boy {
       background: linear-gradient(145deg, rgba(79, 172, 254, 0.15), rgba(0, 242, 254, 0.08));
       border-color: rgba(79, 172, 254, 0.3);
-      box-shadow: 0 0 30px rgba(79, 172, 254, 0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+      box-shadow: 0 0 30px rgba(79, 172, 254, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .vote-btn.boy::before {
@@ -182,7 +215,7 @@
     .vote-btn.girl {
       background: linear-gradient(145deg, rgba(247, 127, 190, 0.15), rgba(253, 160, 133, 0.08));
       border-color: rgba(247, 127, 190, 0.3);
-      box-shadow: 0 0 30px rgba(247, 127, 190, 0.1), inset 0 1px 0 rgba(255,255,255,0.1);
+      box-shadow: 0 0 30px rgba(247, 127, 190, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1);
     }
 
     .vote-btn.girl::before {
@@ -199,7 +232,7 @@
       font-size: 3.5rem;
       display: block;
       margin-bottom: 0.75rem;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
       transition: transform 0.3s ease;
     }
 
@@ -228,10 +261,21 @@
     }
 
     @keyframes voteConfirm {
-      0% { transform: scale(1); }
-      30% { transform: scale(1.08); }
-      60% { transform: scale(0.95); }
-      100% { transform: scale(1); }
+      0% {
+        transform: scale(1);
+      }
+
+      30% {
+        transform: scale(1.08);
+      }
+
+      60% {
+        transform: scale(0.95);
+      }
+
+      100% {
+        transform: scale(1);
+      }
     }
 
     /* Results section */
@@ -313,7 +357,7 @@
       font-size: 0.85rem;
       font-weight: 700;
       color: white;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
       white-space: nowrap;
     }
 
@@ -403,8 +447,13 @@
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     /* Stage container */
@@ -424,9 +473,19 @@
     }
 
     @keyframes revealPop {
-      0% { transform: scale(0.5); opacity: 0; }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); opacity: 1; }
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+
+      50% {
+        transform: scale(1.05);
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     /* Stage 1: Vote results */
@@ -493,7 +552,7 @@
       font-size: 1rem;
       font-weight: 800;
       color: white;
-      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
       white-space: nowrap;
     }
 
@@ -538,8 +597,15 @@
     }
 
     @keyframes pulseGlow {
-      0%, 100% { box-shadow: 0 0 15px rgba(255, 215, 0, 0.1); }
-      50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.2); }
+
+      0%,
+      100% {
+        box-shadow: 0 0 15px rgba(255, 215, 0, 0.1);
+      }
+
+      50% {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+      }
     }
 
     /* Stage 2: Slot machine + answer */
@@ -557,7 +623,7 @@
       border: 2px solid rgba(255, 255, 255, 0.1);
       background: rgba(255, 255, 255, 0.03);
       position: relative;
-      box-shadow: inset 0 0 60px rgba(0,0,0,0.3);
+      box-shadow: inset 0 0 60px rgba(0, 0, 0, 0.3);
     }
 
     /* Gradient fades at top and bottom edges */
@@ -571,10 +637,12 @@
       z-index: 2;
       pointer-events: none;
     }
+
     .slot-viewport::before {
       top: 0;
       background: linear-gradient(to bottom, var(--bg-dark), transparent);
     }
+
     .slot-viewport::after {
       bottom: 0;
       background: linear-gradient(to top, var(--bg-dark), transparent);
@@ -595,7 +663,7 @@
 
     .slot-item .slot-emoji {
       font-size: 5rem;
-      filter: drop-shadow(0 4px 16px rgba(0,0,0,0.4));
+      filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
     }
 
     .slot-item .slot-label {
@@ -625,12 +693,12 @@
 
     .slot-viewport.landed.landed-boy {
       border-color: var(--boy-primary);
-      box-shadow: inset 0 0 40px rgba(0,0,0,0.2), 0 0 40px var(--boy-glow), 0 0 80px rgba(79, 172, 254, 0.15);
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px var(--boy-glow), 0 0 80px rgba(79, 172, 254, 0.15);
     }
 
     .slot-viewport.landed.landed-girl {
       border-color: var(--girl-primary);
-      box-shadow: inset 0 0 40px rgba(0,0,0,0.2), 0 0 40px var(--girl-glow), 0 0 80px rgba(247, 127, 190, 0.15);
+      box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.2), 0 0 40px var(--girl-glow), 0 0 80px rgba(247, 127, 190, 0.15);
     }
 
     /* Final answer text that appears after slot stops */
@@ -670,8 +738,13 @@
     }
 
     @keyframes revealBounce {
-      from { transform: translateY(0) scale(1); }
-      to { transform: translateY(-6px) scale(1.03); }
+      from {
+        transform: translateY(0) scale(1);
+      }
+
+      to {
+        transform: translateY(-6px) scale(1.03);
+      }
     }
 
     .reveal-subtitle {
@@ -711,11 +784,25 @@
     }
 
     @media (max-width: 600px) {
-      .slot-viewport { height: 160px; }
-      .slot-item { height: 160px; }
-      .slot-item .slot-emoji { font-size: 3.5rem; }
-      .slot-item .slot-label { font-size: 2rem; }
-      .final-answer-title { font-size: 2.5rem; }
+      .slot-viewport {
+        height: 160px;
+      }
+
+      .slot-item {
+        height: 160px;
+      }
+
+      .slot-item .slot-emoji {
+        font-size: 3.5rem;
+      }
+
+      .slot-item .slot-label {
+        font-size: 2rem;
+      }
+
+      .final-answer-title {
+        font-size: 2.5rem;
+      }
     }
 
     /* === SETUP SCREEN === */
@@ -766,8 +853,15 @@
     }
 
     @keyframes gentleBounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
     }
 
     .setup-title {
@@ -839,7 +933,7 @@
     .setup-choice.boy {
       background: linear-gradient(145deg, rgba(79, 172, 254, 0.12), rgba(0, 242, 254, 0.06));
       border-color: rgba(79, 172, 254, 0.25);
-      box-shadow: 0 0 30px rgba(79, 172, 254, 0.08), inset 0 1px 0 rgba(255,255,255,0.08);
+      box-shadow: 0 0 30px rgba(79, 172, 254, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .setup-choice.boy::before {
@@ -865,7 +959,7 @@
     .setup-choice.girl {
       background: linear-gradient(145deg, rgba(247, 127, 190, 0.12), rgba(253, 160, 133, 0.06));
       border-color: rgba(247, 127, 190, 0.25);
-      box-shadow: 0 0 30px rgba(247, 127, 190, 0.08), inset 0 1px 0 rgba(255,255,255,0.08);
+      box-shadow: 0 0 30px rgba(247, 127, 190, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.08);
     }
 
     .setup-choice.girl::before {
@@ -892,7 +986,7 @@
       font-size: 3.2rem;
       display: block;
       margin-bottom: 0.6rem;
-      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
       transition: transform 0.3s ease;
     }
 
@@ -963,11 +1057,25 @@
     }
 
     @media (max-width: 600px) {
-      .setup-title { font-size: 1.8rem; }
-      .setup-choices { gap: 1rem; }
-      .setup-choice { padding: 2rem 1rem; }
-      .setup-choice .setup-emoji { font-size: 2.5rem; }
-      .setup-choice .setup-choice-label { font-size: 1.1rem; }
+      .setup-title {
+        font-size: 1.8rem;
+      }
+
+      .setup-choices {
+        gap: 1rem;
+      }
+
+      .setup-choice {
+        padding: 2rem 1rem;
+      }
+
+      .setup-choice .setup-emoji {
+        font-size: 2.5rem;
+      }
+
+      .setup-choice .setup-choice-label {
+        font-size: 1.1rem;
+      }
     }
 
     /* Countdown overlay */
@@ -997,9 +1105,20 @@
     }
 
     @keyframes countPop {
-      0% { transform: scale(2); opacity: 0; }
-      40% { transform: scale(0.9); opacity: 1; }
-      100% { transform: scale(1); opacity: 1; }
+      0% {
+        transform: scale(2);
+        opacity: 0;
+      }
+
+      40% {
+        transform: scale(0.9);
+        opacity: 1;
+      }
+
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
     }
 
     .reveal-stats {
@@ -1054,15 +1173,33 @@
 
     /* Responsive */
     @media (max-width: 600px) {
-      .header h1 { font-size: 2.2rem; }
-      .vote-section { gap: 1rem; }
-      .vote-btn { padding: 2rem 1rem; }
-      .vote-btn .emoji { font-size: 2.8rem; }
-      .vote-btn .label { font-size: 1.1rem; }
-      .results-section { padding: 1.5rem; }
+      .header h1 {
+        font-size: 2.2rem;
+      }
+
+      .vote-section {
+        gap: 1rem;
+      }
+
+      .vote-btn {
+        padding: 2rem 1rem;
+      }
+
+      .vote-btn .emoji {
+        font-size: 2.8rem;
+      }
+
+      .vote-btn .label {
+        font-size: 1.1rem;
+      }
+
+      .results-section {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Setup Screen -->
@@ -1072,7 +1209,8 @@
       <div class="setup-title">Secret Setup</div>
       <div class="setup-subtitle">
         Only the <strong>host</strong> should see this screen.<br>
-        Select the real answer, then hand over for voting!
+        Select the real answer, then hand over for voting!<br>
+        Runs entirely in your browser, <strong>nothing gets saved anywhere.</strong>
       </div>
       <div class="setup-choices">
         <button class="setup-choice boy" id="setup-boy" onclick="selectAnswer('boy')">
@@ -1809,8 +1947,8 @@
       const colors = type === 'boy'
         ? ['#4facfe', '#00f2fe', '#81d4fa', '#b3e5fc', '#ffffff']
         : type === 'girl'
-        ? ['#f77fbe', '#fda085', '#f8bbd0', '#f48fb1', '#ffffff']
-        : ['#4facfe', '#f77fbe', '#ffd700', '#00f2fe', '#fda085'];
+          ? ['#f77fbe', '#fda085', '#f8bbd0', '#f48fb1', '#ffffff']
+          : ['#4facfe', '#f77fbe', '#ffd700', '#00f2fe', '#fda085'];
 
       for (let i = 0; i < 200; i++) {
         confettiPieces.push({
@@ -1865,4 +2003,5 @@
     }
   </script>
 </body>
+
 </html>
